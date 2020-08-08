@@ -54,6 +54,20 @@
 /*-----------------------------------------------@Nevis -----------------------------*/
 
                                   //create the trig function
+function sin(){
+	var sinKey = document.getElementByID("input").value;
+	 return Math.sin(value);
+}
+/*Cos*/
+function cos(){
+	var cosKey = document.getElementByID("input").value;
+	 return Math.cos(value);
+}
+/*Tan*/
+function tan(){
+	var tanKey = document.getElementByID("input").value;
+	 return Math.tan(value);
+}
 
 
 /*--------------------------------------------------------------------------------------------*/
