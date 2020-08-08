@@ -12,12 +12,15 @@
 
 /*----------------------------------@Naomity----------------------------------------*/
 
+//ADD EVENT LISTENER
 
-
-
-                                   //ADD EVENT LISTENER
-
-
+            input_element.addEventListener('click', event => {
+              const target_btn = event.target;
+    
+         calculator_buttons.forEach(button => {
+              if (button.name == target_btn.id) calculator(button);
+    })
+})
 
 
 
