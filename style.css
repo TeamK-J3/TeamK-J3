@@ -1,1 +1,346 @@
 /*---------------------------------------------------@TUNRAYO--------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    background-origin: padding-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+.container {
+    border: 1px solid black;
+    width: 550px;
+    height: 600px;
+    /* height: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #AFEEEE;
+    box-shadow: 5px 5px 5px 5px #ddd;
+}
+
+.calculator{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-container{
+    background-color: #FFFFFF;
+    width: 520px;
+    height: auto;
+    border-radius: 0 0 30px 30px;
+}
+
+.display{
+    width: 90%;
+    margin-left: 2rem;
+    background-color: #e5dfa0;
+    height: 150px;
+    border: 1px solid transparent;
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 5px 5px transparent;
+    border-radius: 10px;
+   
+}   
+.screen {
+    background-color: #AFEEEE;
+    border: 1px solid transparent;
+    height: 200px;
+    
+}
+.operation{
+    width: 500px;
+    height: 60px;
+    color: black;
+    font-size: 1.9em;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+   
+}
+.operation .value{
+    position: absolute;
+    bottom: 5px;
+    right : 10px;
+    white-space: wrap;
+    overflow: hidden;
+    margin-right: 2rem;
+    flex-wrap: wrap;
+}
+
+.result{
+    width: 500px;
+    height: 60px;
+    color: #000;
+    font-size: 2.6em;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.result .value{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right : 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 2rem;
+}
+.input{
+    background-color: #AFEEEE;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #1d1d1d;
+    height: 390px;
+    /* height: 100%; */
+    margin-top: -15px;
+}
+.input button span{
+    font-size: 0.6em;
+    position: absolute;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.row button{
+    width: 68px;
+    height: 50px;
+    font-size: 1.5em;
+    border: 0.5px solid black;
+    border-radius: 5%;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 5px 5px 0 #eee;
+    margin: 3px;
+}
+
+.row button:hover{
+    font-weight: bold;
+}
+
+.row #calculate{
+    color: black;
+    background-color: #549EA0;
+    width: 28%;
+    border-radius: 10px;
+}
+
+.row #delet, .row #clear{
+    color: #FFF;
+    background-color: #e05046;
+    border-radius: 10px;
+}
+
+.row #ANS {
+    font-size: 1.2em;
+}
+
+
+#addition, #subtraction, #multiplication, #division {
+    color: #549EA0;
+    font-weight: 500;
+}
+
+/* .input button span{
+    font-size: 0.6em;
+    position: absolute;
+} */
+
+.active-state{
+    background-color: #1d1d1d !important;
+    color: #FFF !important;
+    border-radius: 10px !important;
+}
+
+
+ #factorial, #open-parenthesis, #close-parenthesis,
+#percentage,#inverse, #sin, #ln, #asin, #acos, #atan, #pi, #cos,
+#log, #e, #tan, #square-root, #square, #power,
+#cube-root  {
+    background-color: #1d1d1d;
+    color: #FFF;
+    border-radius: 2px solid #647489;
+}
+#one, #deg, #rad, #two, #three,#four, #five, #six, #seven, #eight, #nine, #subtraction,
+#ANS, #exp, #dot, #zero, #calculate, #addition, #division, #multiplication {
+    background-color: #647489;
+    border-radius: 2px solid;
+}
+
+
+
+
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 640px) {
+    .input button span{
+        font-size: 0.6em;
+        position: absolute;
+    }
+    .input{
+        height: 390px;
+        /* height: 100%; */
+        margin-top: -15px;
+        width: 100%;
+    }
+    .row #calculate{
+        width: 20%;
+    }
+    .row #delet, .row #clear{
+        width: 12%;
+    }
+    .row #ANS {
+        width: 12%;
+    }
+    #one, #deg, #rad, #two, #three,#four, #five, #six, #seven, #eight, #nine, #subtraction,
+    #ANS, #exp, #dot, #zero, #calculate, #addition, #division, #multiplication,#factorial, 
+    #open-parenthesis, #close-parenthesis, #percentage,#inverse, #sin, #ln, #pi, #cos,
+    #log, #e, #tan, #square-root, #square, #power,#cube-root, #addition, #subtraction, 
+    #multiplication, #division
+    {
+        width: 12%;
+    }
+    #asin, #acos, #atan{
+        width: 10%;
+    }
+    .container{
+        width: 92%;
+    }
+    .main-container{
+        width: 90%;
+        margin-left: 4.7%;
+    }
+    .screen{
+        width: 100%;
+    }
+    .display{
+        width: 98%;
+        right: 30px;
+    }
+    .operation, .result{
+        width: 500px;
+    }
+}
+
+
+
+@media screen and (max-width: 583px) {
+    .operation, .result{
+        width: 450px;
+    }
+    #asin, #acos, #atan{
+        font-size: medium;
+    }
+    .row button{
+        box-shadow: 0 2px 2px 0 #eee;
+    }
+}
+@media screen and (max-width: 527px) {
+    .operation, .result{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 472px) {
+    .operation, .result{
+        width: 350px;
+    }
+    #asin, #acos, #atan{
+        font-size: small;
+    }
+    #one, #deg, #rad, #two, #three,#four, #five, #six, #seven, #eight, #nine, #subtraction,
+    #ANS, #exp, #dot, #zero, #calculate, #addition, #division, #multiplication,#factorial, 
+    #open-parenthesis, #close-parenthesis, #percentage,#inverse, #sin, #ln, #pi, #cos,
+    #log, #e, #tan, #square-root, #square, #power,#cube-root, #addition, #subtraction, 
+    #multiplication, #division
+    {
+        font-size: medium;
+    }
+    .row #calculate{
+        width: 17%;
+    }
+    .row #delet, .row #clear{
+        font-size: medium;
+    }
+    .row #ANS {
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 417px) {
+    .operation, .result{
+        width: 300px;
+    }
+    .result .value{
+        margin-right: 0rem;
+        font-size: x-large;
+    }
+    .operation .value{
+        margin-right: 0rem;
+        font-size: x-large;
+        color: #e05046;
+    }
+}
+@media screen and (max-width: 370px) {
+    .operation, .result{
+        width: 250px;
+    }
+}
+
+
+@media only screen and (max-height: 620px) {
+    .container {
+        top: 60%;
+    }
+}
+@media only screen and (max-height: 520px) {
+    .container {
+        top: 70%;
+    }
+}
+@media only screen and (max-height: 420px) {
+    .container {
+        top: 80%;
+    }
+}
+@media only screen and (max-height: 350px) {
+    .container {
+        top: 90%;
+    }
+    .display{
+        height: 120px;
+    }
+    .screen{
+        height: 160px;
+    }
+}
+@media only screen and (max-height: 220px) {
+    .container {
+        top: 100%;
+    }
+}
+@media only screen and (max-height: 120px) {
+    .container {
+        top: 110%;
+    }
+}
+@media only screen and (max-height: 20px) {
+    .container {
+        top: 120%;
+    }
+}
