@@ -169,9 +169,6 @@ html{
 
 
 
-
-
-
  #factorial, #open-parenthesis, #close-parenthesis,
 #percentage,#inverse, #sin, #ln, #asin, #acos, #atan, #pi, #cos,
 #log, #e, #tan, #square-root, #square, #power,
@@ -252,6 +249,11 @@ html{
     #asin, #acos, #atan{
         font-size: medium;
     }
+
+    .row button{
+        box-shadow: 0 2px 2px 0 #eee;
+    }
+
 }
 @media screen and (max-width: 527px) {
     .operation, .result{
