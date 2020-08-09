@@ -51,8 +51,8 @@ This process here should be able to guide you on how to contribute effectively t
 - Make your Pull request and wait for it to be merged.
 
 
-\***************** NOTE*******************\
-- Push your code to the development branch, any PR on tge master branch will be rejected.
+\***************** NOTE*******************
+- Push your code to the development branch, any PR on the master branch will be rejected.
 # Happy hacking!
 
 
