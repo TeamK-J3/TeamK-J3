@@ -44,9 +44,38 @@
 
 /*-------------------------------------@oluwabukunmi----------------------------------------------*/
 
-
+//creating data variable
+let data={
+    operation: [],
+    formula : []
+}
 
                                                     // create number and key function
+                                                    
+function calculator(button){
+    if(button.type=="number"){
+        data.operation.push(button.symbol);
+        data.formula.push(button.formula);
+
+    }else if (button.type =="key"){
+        if(button.name =="clear"){
+            data.operation =[];
+            dta.formula =[];           
+            updateOutputResult(0);
+
+        }else if (button.name == "delete"){
+            data.operation.pop();
+            data.formula.pop();
+
+        }else if (button.name =="rad"){
+            RADIAN = true;
+            angleToggler();
+        }else if (button.name == "deg"){
+            RADIAN=false;
+            angleToggler();
+        }
+    }
+}
 
 
 /*-----------------------------------------------------------------------------------------*/
